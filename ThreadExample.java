@@ -1,0 +1,22 @@
+class NumberThread extends Thread{
+    public void run(){
+        for(int i=0;i<=5;i++){
+            System.out.println("Number:"+i);
+        }
+    }
+}
+class LetterThread extends Thread{
+    public void run(){
+        for(char ch='A';ch<='E';ch++){
+            System.out.println("Letter:"+ch);
+        }
+    }
+}
+public class ThreadExample{
+    public static void main (String[]args){
+        NumberThread t1= new NumberThread();
+        LetterThread t2= new LetterThread();
+        t1.start();
+        t2.start();
+    }
+}
